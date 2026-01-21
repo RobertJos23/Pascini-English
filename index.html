@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aulas de inglês personalizadas para todos os níveis. Professora experiente e metodologia eficaz.">
+    
+    <!-- Título que aparece na aba do navegador -->
+    <title>Pascini English - Aulas Personalizadas</title>
+    
+    <!-- Link para o arquivo CSS que estiliza a página -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link para ícones (usando Google Fonts Icons) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <!-- FormSubmit não requer scripts adicionais - funciona diretamente! -->
+</head>
+<body>
+    <!-- Cabeçalho/Navegação do site -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Logo ou nome da professora -->
+            <div class="logo">
+                <h1>Pascini English</h1>
+            </div>
+            
+            <!-- Menu de navegação (desktop) -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            
+            <!-- Botão para menu mobile (aparece apenas em telas pequenas) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Seção Hero - Primeira coisa que o visitante vê -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Aprenda Inglês de Forma Eficaz e Personalizada</h2>
+            <p class="hero-subtitle">Aulas adaptadas ao seu ritmo e objetivos. Do básico ao avançado.</p>
+            <a href="#contato" class="btn btn-primary">Comece Agora</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre a Professora -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>
+                        Olá! Sou uma professora de inglês com mais de 10 anos de experiência 
+                        ensinando alunos de todos os níveis. Minha metodologia é focada em 
+                        conversação prática e aprendizado contextualizado.
+                    </p>
+                    <p>
+                        Acredito que cada aluno tem seu próprio ritmo e objetivos únicos. 
+                        Por isso, personalizo cada aula para atender suas necessidades específicas, 
+                        seja para viagens, trabalho, exames ou desenvolvimento pessoal.
+                    </p>
+                    <!-- Lista de qualificações -->
+                    <ul class="qualificacoes">
+                        <li>✓ Certificação Internacional em Ensino de Inglês</li>
+                        <li>✓ Experiência com alunos de todas as idades</li>
+                        <li>✓ Metodologia comprovada e eficaz</li>
+                        <li>✓ Aulas presenciais e online</li>
+                    </ul>
+                </div>
+                <!-- Foto da professora -->
+                <div class="sobre-imagem">
+                    <!-- Foto da professora -->
+                    <img src="../img/professora.png" alt="Professora de Inglês - Pascini English" class="foto-professora" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <!-- Fallback caso a imagem não carregue -->
+                    <div class="imagem-placeholder" style="display: none;">
+                        <span class="material-symbols-outlined">person</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços/Planos -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Planos</h2>
+            <div class="planos-grid">
+                <!-- Plano Básico -->
+                <div class="plano-card">
+                    <h3 class="plano-nome">Básico</h3>
+                    <div class="plano-preco">
+                        <span class="moeda">R$</span>
+                        <span class="valor">150</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li>2 aulas por semana</li>
+                        <li>Material incluso</li>
+                        <li>Aulas online</li>
+                        <li>Suporte via WhatsApp</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-outline">Escolher Plano</a>
+                </div>
+
+                <!-- Plano Intermediário (Destaque) -->
+                <div class="plano-card plano-destaque">
+                    <div class="badge-popular">Mais Popular</div>
+                    <h3 class="plano-nome">Intermediário</h3>
+                    <div class="plano-preco">
+                        <span class="moeda">R$</span>
+                        <span class="valor">250</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li>3 aulas por semana</li>
+                        <li>Material incluso</li>
+                        <li>Aulas online ou presencial</li>
+                        <li>Suporte prioritário</li>
+                        <li>Exercícios personalizados</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary">Escolher Plano</a>
+                </div>
+
+                <!-- Plano Avançado -->
+                <div class="plano-card">
+                    <h3 class="plano-nome">Avançado</h3>
+                    <div class="plano-preco">
+                        <span class="moeda">R$</span>
+                        <span class="valor">350</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li>4 aulas por semana</li>
+                        <li>Material premium</li>
+                        <li>Aulas online ou presencial</li>
+                        <li>Suporte 24/7</li>
+                        <li>Preparação para exames</li>
+                        <li>Aulas individuais</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-outline">Escolher Plano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem Nossos Alunos</h2>
+            <div class="depoimentos-grid">
+                <!-- Depoimento 1 -->
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">
+                        "As aulas são excelentes! A professora é muito paciente e explica 
+                        de forma clara. Em 3 meses já consegui melhorar muito minha conversação."
+                    </p>
+                    <p class="depoimento-autor">- Maria Silva</p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">
+                        "Metodologia perfeita! As aulas são dinâmicas e sempre focadas no 
+                        que realmente importa. Recomendo muito!"
+                    </p>
+                    <p class="depoimento-autor">- João Santos</p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">
+                        "Consegui passar no exame de proficiência graças às aulas personalizadas. 
+                        A professora realmente entende as necessidades de cada aluno."
+                    </p>
+                    <p class="depoimento-autor">- Ana Costa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-content">
+                <!-- Formulário de contato -->
+                <!-- Usando FormSubmit - serviço gratuito que envia emails diretamente -->
+                <form class="contato-form" id="contatoForm" method="POST" action="https://formsubmit.co/gabrielapascini17@gmail.com">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" 
+                               placeholder="Seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" 
+                               placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" 
+                                  placeholder="Conte-me sobre seus objetivos com o inglês..."></textarea>
+                    </div>
+
+                    <!-- Campo oculto para configurar o FormSubmit -->
+                    <input type="hidden" name="_subject" value="Nova Mensagem do Site - Pascini English">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="">
+                    <input type="hidden" name="_template" value="box">
+                    
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Enviar Mensagem</button>
+                    <p id="formStatus" style="margin-top: 1rem; display: none;"></p>
+                </form>
+
+                <!-- Informações de contato alternativas -->
+                <div class="contato-info">
+                    <h3>Outras Formas de Contato</h3>
+                    <div class="info-item">
+                        <span class="material-symbols-outlined">email</span>
+                        <p>gabrielapascini17@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-symbols-outlined">phone</span>
+                        <p>+55 (31) 8261-1517</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-symbols-outlined">chat</span>
+                        <p>WhatsApp: +55 (31) 8261-1517</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-symbols-outlined">schedule</span>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé do site -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Pascini English. Todos os direitos reservados.</p>
+            <p>Desenvolvido com dedicação para ajudar você a alcançar seus objetivos.</p>
+        </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript que adiciona interatividade -->
+    <script src="scripts.js"></script>
+</body>
+</html>
