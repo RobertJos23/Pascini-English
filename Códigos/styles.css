@@ -1,0 +1,609 @@
+/* ============================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ============================================ */
+
+/* Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que padding e border sejam incluídos na largura */
+}
+
+/* Configurações do corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #e0e0e0; /* Cor do texto claro para tema escuro */
+    background-color: #1a1a1a; /* Cor de fundo escuro */
+}
+
+/* Remove decoração de links */
+a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do elemento pai */
+}
+
+/* Remove estilos de lista */
+ul {
+    list-style: none;
+}
+
+/* ============================================
+   UTILITÁRIOS (Classes auxiliares)
+   ============================================ */
+
+/* Container centralizado com largura máxima */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento nas laterais */
+}
+
+/* Botão primário (principal) */
+.btn {
+    display: inline-block; /* Permite definir largura e altura */
+    padding: 12px 30px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    transition: all 0.3s ease; /* Animação suave em mudanças */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    border: none; /* Remove borda padrão */
+    font-size: 16px;
+}
+
+/* Variante do botão - estilo primário */
+.btn-primary {
+    background-color: #2d8650; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+}
+
+.btn-primary:hover {
+    background-color: #1e5d2e; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Move o botão 2px para cima */
+    box-shadow: 0 5px 15px rgba(45, 134, 80, 0.3); /* Sombra verde */
+}
+
+/* Variante do botão - estilo outline (borda) */
+.btn-outline {
+    background-color: transparent; /* Fundo transparente */
+    color: #2d8650; /* Cor do texto verde */
+    border: 2px solid #2d8650; /* Borda verde */
+}
+
+.btn-outline:hover {
+    background-color: #2d8650; /* Fundo verde ao passar o mouse */
+    color: white; /* Texto branco */
+}
+
+/* Título de seção */
+.section-title {
+    font-size: 2.5rem; /* Tamanho grande */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 3rem; /* Espaço abaixo */
+    color: #f0f0f0; /* Cor clara para tema escuro */
+}
+
+/* ============================================
+   HEADER / NAVEGAÇÃO
+   ============================================ */
+
+.header {
+    background-color: #1e1e1e; /* Fundo escuro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+    position: sticky; /* Fixa no topo ao rolar a página */
+    top: 0;
+    z-index: 1000; /* Garante que fica acima de outros elementos */
+    border-bottom: 1px solid #2d2d2d; /* Borda sutil */
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaça os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.logo h1 {
+    color: #2d8650;
+    font-size: 1.8rem;
+}
+
+/* Menu de navegação */
+.nav-menu {
+    display: flex; /* Itens em linha */
+    gap: 2rem; /* Espaço entre os itens */
+}
+
+.nav-link {
+    color: #e0e0e0; /* Texto claro */
+    font-weight: 500; /* Peso médio da fonte */
+    transition: color 0.3s ease;
+    position: relative; /* Para posicionar o efeito hover */
+}
+
+/* Efeito de linha embaixo ao passar o mouse */
+.nav-link:hover {
+    color: #2d8650;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2d8650;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Linha cresce da esquerda para direita */
+}
+
+/* Botão do menu mobile (oculto por padrão) */
+.menu-toggle {
+    display: none; /* Escondido em telas grandes */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* ============================================
+   SEÇÃO HERO (Banner Principal)
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, #1e5d2e 0%, #66bb6a 100%); /* Gradiente verde escuro/verde claro */
+    color: white; /* Texto branco */
+    padding: 8rem 20px; /* Espaçamento interno grande */
+    text-align: center; /* Texto centralizado */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem; /* Título bem grande */
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease; /* Animação de entrada */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9; /* Levemente transparente */
+    animation: fadeInUp 1s ease; /* Animação com delay */
+}
+
+/* Animação de entrada suave */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Começa 30px abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina na posição normal */
+    }
+}
+
+/* ============================================
+   SEÇÃO SOBRE
+   ============================================ */
+
+.sobre {
+    padding: 5rem 0; /* Espaçamento vertical */
+    background-color: #242424; /* Fundo escuro */
+}
+
+.sobre-content {
+    display: grid; /* Layout em grade */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 3rem; /* Espaço entre as colunas */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.sobre-texto p {
+    margin-bottom: 1rem; /* Espaço entre parágrafos */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d0d0; /* Texto claro */
+}
+
+/* Lista de qualificações */
+.qualificacoes {
+    margin-top: 1.5rem;
+}
+
+.qualificacoes li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #2d8650;
+}
+
+/* Foto da professora */
+.sobre-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-professora {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Mantém proporção e preenche o espaço */
+    border-radius: 50%; /* Formato circular */
+    border: 5px solid #2d8650; /* Borda verde */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Sombra mais forte para tema escuro */
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse na foto */
+.foto-professora:hover {
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
+
+/* Placeholder caso a imagem não carregue */
+.imagem-placeholder {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #1e5d2e 0%, #66bb6a 100%);
+    border-radius: 50%; /* Formato circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 5px solid #2d8650;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Sombra mais forte */
+}
+
+.imagem-placeholder .material-symbols-outlined {
+    font-size: 120px;
+}
+
+/* ============================================
+   SEÇÃO SERVIÇOS / PLANOS
+   ============================================ */
+
+.servicos {
+    padding: 5rem 0;
+    background-color: #1a1a1a; /* Fundo escuro */
+}
+
+/* Grid de planos */
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo: mínimo 300px */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Card de plano */
+.plano-card {
+    background-color: #2a2a2a; /* Fundo escuro para cards */
+    border: 2px solid #3a3a3a; /* Borda escura */
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Para posicionar o badge */
+}
+
+.plano-card:hover {
+    transform: translateY(-10px); /* Move para cima ao passar o mouse */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Sombra mais forte */
+    border-color: #2d8650; /* Borda verde ao hover */
+}
+
+/* Plano em destaque */
+.plano-destaque {
+    border-color: #2d8650; /* Borda verde */
+    transform: scale(1.05); /* Levemente maior */
+}
+
+/* Badge "Mais Popular" */
+.badge-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2d8650;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.plano-nome {
+    font-size: 1.8rem;
+    color: #f0f0f0; /* Texto claro */
+    margin-bottom: 1rem;
+}
+
+/* Preço do plano */
+.plano-preco {
+    margin: 1.5rem 0;
+}
+
+.moeda {
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+.valor {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2d8650;
+}
+
+.periodo {
+    font-size: 1rem;
+    color: #b0b0b0; /* Texto claro */
+}
+
+/* Lista de features do plano */
+.plano-features {
+    margin: 2rem 0;
+    text-align: left; /* Alinha à esquerda */
+}
+
+.plano-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #3a3a3a; /* Linha divisória escura */
+    color: #d0d0d0; /* Texto claro */
+}
+
+.plano-features li:last-child {
+    border-bottom: none; /* Remove linha do último item */
+}
+
+/* ============================================
+   SEÇÃO DEPOIMENTOS
+   ============================================ */
+
+.depoimentos {
+    padding: 5rem 0;
+    background-color: #242424; /* Fundo escuro */
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.depoimento-card {
+    background-color: #2a2a2a; /* Fundo escuro para cards */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border: 1px solid #3a3a3a; /* Borda sutil */
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px); /* Move para cima ao passar o mouse */
+}
+
+.depoimento-estrelas {
+    color: #ffc107; /* Cor dourada para estrelas */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.depoimento-texto {
+    font-style: italic; /* Texto em itálico */
+    color: #d0d0d0; /* Texto claro */
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.depoimento-autor {
+    font-weight: bold;
+    color: #2d8650;
+    text-align: right; /* Alinha à direita */
+}
+
+/* ============================================
+   SEÇÃO CONTATO
+   ============================================ */
+
+.contato {
+    padding: 5rem 0;
+    background-color: #1a1a1a; /* Fundo escuro */
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Formulário maior que informações */
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Formulário */
+.contato-form {
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #e0e0e0; /* Texto claro */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #3a3a3a; /* Borda escura */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit; /* Usa a mesma fonte do body */
+    transition: border-color 0.3s ease;
+    background-color: #2a2a2a; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Estilo para placeholders dos inputs (tema escuro) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888; /* Cor clara para placeholder */
+    opacity: 1; /* Garante que a opacidade seja respeitada */
+}
+
+/* Quando o campo está em foco (clicado) */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Remove contorno padrão */
+    border-color: #2d8650; /* Borda verde */
+    background-color: #333333; /* Fundo um pouco mais claro quando em foco */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* Informações de contato */
+.contato-info {
+    background-color: #2a2a2a; /* Fundo escuro */
+    padding: 2rem;
+    border-radius: 10px;
+    height: fit-content; /* Altura conforme conteúdo */
+    border: 1px solid #3a3a3a; /* Borda sutil */
+}
+
+.contato-info h3 {
+    margin-bottom: 1.5rem;
+    color: #f0f0f0; /* Texto claro */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item .material-symbols-outlined {
+    color: #2d8650;
+    font-size: 1.5rem;
+}
+
+.info-item p {
+    color: #d0d0d0; /* Texto claro */
+    margin: 0;
+}
+
+/* ============================================
+   FOOTER (Rodapé)
+   ============================================ */
+
+.footer {
+    background-color: #151515; /* Fundo ainda mais escuro */
+    color: #d0d0d0; /* Texto claro */
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #2d2d2d; /* Borda superior */
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+/* ============================================
+   RESPONSIVIDADE (Mobile)
+   ============================================ */
+
+/* Quando a tela tem menos de 768px de largura */
+@media (max-width: 768px) {
+    /* Mostra o botão do menu mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconde o menu por padrão no mobile */
+    .nav-menu {
+        position: fixed; /* Fixa na tela */
+        top: 70px; /* Abaixo do header */
+        left: -100%; /* Fora da tela (escondido) */
+        flex-direction: column; /* Itens em coluna */
+        background-color: #1e1e1e; /* Fundo escuro */
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.8);
+        padding: 2rem 0;
+        border-top: 1px solid #2d2d2d;
+    }
+
+    /* Quando o menu está ativo (aberto) */
+    .nav-menu.active {
+        left: 0; /* Aparece na tela */
+    }
+
+    /* Título hero menor no mobile */
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Seção sobre em coluna única */
+    .sobre-content {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+
+    /* Planos em coluna única */
+    .planos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Remove o destaque do plano no mobile */
+    .plano-destaque {
+        transform: scale(1);
+    }
+
+    /* Contato em coluna única */
+    .contato-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Título de seção menor */
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Quando a tela tem menos de 480px */
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 20px; /* Menos padding */
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .valor {
+        font-size: 2rem; /* Preço menor */
+    }
+}
+
